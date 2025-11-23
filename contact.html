@@ -1,37 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
-  <link rel="stylesheet" href="./style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Fitness Planner</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="page-contact">
+<body>
 
-<div class="wrap">
-
-<header class="top">
-  <div class="card header-card">
-    <div class="logo-box">F</div>
-    <div><h1>Contact Us</h1></div>
+<header class="header-card">
+  <div class="logo-box">F</div>
+  <div>
+    <h1>Contact</h1>
+    <p>Get in touch</p>
   </div>
-
-  <nav class="nav">
-    <a href="./index.html">Home</a>
-    <a href="./steroid-shop.html">Steroid Shop</a>
-    <a href="./customers.html">Customers</a>
-    <a href="./user.html">User</a>
-    <a href="./contact.html">Contact</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="steroid-shop.html">Steroid Shop</a>
+    <a href="customers.html">Customers</a>
+    <a href="user.html">User</a>
+    <a href="contact.html" class="active">Contact</a>
   </nav>
 </header>
 
-<div class="card contact-card">
-  <h2>Get in Touch</h2>
-  <p>Email: nitishkushwaha721@gmail.com</p>
-  <p>Instagram: @nitissh_10</p>
-  <p>Phone: +91 7415203865</p>
+<div class="wrap">
+  <div class="card">
+    <h2>Contact Info</h2>
+    <p><strong>Email:</strong> nitishkushwaha721@gmail.com</p>
+    <p><strong>Instagram:</strong> @nitissh_10</p>
+    <p><strong>Phone:</strong> +91 7415203865</p>
+    <hr style="margin:12px 0; border-color:rgba(255,255,255,0.08)">
+
+    <h3>Send a quick message</h3>
+    <form onsubmit="alert('Message sent (demo).'); return false;">
+      <label>Name</label>
+      <input type="text" placeholder="Your name" required>
+
+      <label>Message</label>
+      <textarea placeholder="Write your message" style="width:100%; height:100px; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.15); background:rgba(0,0,0,0.35); color:#fff"></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
 </div>
 
-</div>
 </body>
 </html>
