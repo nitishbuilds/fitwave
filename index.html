@@ -1,120 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fitness Planner</title>
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    body {
-      background: url("./images/home main page background.jpg") no-repeat center center fixed;
-      background-size: cover;
-    }
-  </style>
-
 </head>
 
 <body>
 
-  <!-- Popup on load -->
-  <div id="popup" class="popup">
-    <div class="popup-box">
-      <p>Hostel ka khana khake body nahi banti, Yashovardhan bhai 😉</p>
-      <button onclick="closePopup()">OK</button>
-    </div>
+<!-- POPUP -->
+<div id="popup" class="popup">
+  <div class="popup-box">
+    Hostel ka khana khake body nahi banti — Yashovardhan bhai 😉
+    <br><br>
+    <button onclick="document.getElementById('popup').style.display='none'">OK</button>
+  </div>
+</div>
+
+<script>
+  window.onload = () => {
+    document.getElementById("popup").style.display = "flex";
+  };
+</script>
+
+<header class="header-card">
+  <div class="logo-box">F</div>
+  <div>
+    <h1>Fitness Planner</h1>
+    <p>Diet + Workout Auto Planner</p>
   </div>
 
-  <header class="top">
-    <div class="card header-card">
-      <div class="logo-box">F</div>
-      <div>
-        <h1>Fitness Planner</h1>
-        <p>Diet + Workout Auto Planner</p>
-      </div>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="steroid-shop.html">Steroid Shop</a>
+    <a href="customers.html">Customers</a>
+    <a href="user.html">User</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-      <nav class="nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="steroid-shop.html">Steroid Shop</a>
-        <a href="customers.html">Customers</a>
-        <a href="user.html">User</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+<div class="wrap">
+  <div class="grid">
 
-  <div class="wrap">
-    <div class="grid">
+    <div class="card">
+      <h2>Tell me about you</h2>
 
-      <!-- LEFT CARD -->
-      <div class="card">
-        <h2>Tell me about you</h2>
+      <label>Gender</label>
+      <select id="gender"><option>Male</option><option>Female</option></select>
 
-        <label>Gender</label>
-        <select id="gender">
-          <option>Male</option>
-          <option>Female</option>
-        </select>
+      <label>Age</label>
+      <input type="number" id="age" value="20">
 
-        <label>Age</label>
-        <input type="number" id="age" value="20">
+      <label>Height (cm)</label>
+      <input type="number" id="height" value="170">
 
-        <label>Height (cm)</label>
-        <input type="number" id="height" value="170">
+      <label>Weight (kg)</label>
+      <input type="number" id="weight" value="70">
 
-        <label>Weight (kg)</label>
-        <input type="number" id="weight" value="70">
+      <label>Body Type</label>
+      <select id="bodytype">
+        <option>Meso</option><option>Endo</option><option>Ecto</option>
+      </select>
 
-        <label>Body Type</label>
-        <select id="bodytype">
-          <option>Meso</option>
-          <option>Endo</option>
-          <option>Ecto</option>
-        </select>
-
-        <label>Goal</label>
-        <select id="goal">
+      <label>Goal</label>
+      <select id="goal">
           <option>Build Muscle</option>
           <option>Lose Fat</option>
           <option>Maintain</option>
-        </select>
+      </select>
 
-        <label>Do you go to gym?</label>
-        <select id="gym">
-          <option>Yes</option>
-          <option>No</option>
-        </select>
-
-        <label>Desired Physique</label>
-        <select id="physique">
-          <option>Shredded</option>
-          <option>Bulky</option>
-          <option>Aesthetic</option>
-        </select>
-
-        <button id="generateBtn">Generate Plan</button>
-      </div>
-
-      <!-- RIGHT CARD -->
-      <div class="card">
-        <h2>Your Plan</h2>
-        <div id="result">Click Generate Plan</div>
-      </div>
-
+      <button id="generateBtn">Generate Plan</button>
     </div>
+
+    <div class="card">
+      <h2>Your Plan</h2>
+      <div id="result">Click Generate Plan</div>
+    </div>
+
   </div>
+</div>
 
-  <script src="script.js"></script>
-
-  <script>
-    function closePopup() {
-      document.getElementById("popup").style.display = "none";
-    }
-
-    window.onload = () => {
-      document.getElementById("popup").style.display = "flex";
-    }
-  </script>
+<script src="script.js"></script>
 
 </body>
 </html>
