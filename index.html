@@ -1,96 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fitness Planner</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background: url("./images/home main page background.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+  </style>
+
 </head>
-<body class="page-home">
-  <body class="dark-bg" style="background-image: url('./images/home main page background.jpg');">
 
+<body>
 
-<div class="wrap">
-
-<header class="top">
-  <div class="card header-card">
-    <div class="logo-box">F</div>
-    <div>
-      <h1>Fitness Planner</h1>
-      <p class="small">Diet + Workout Auto Planner</p>
+  <!-- Popup on load -->
+  <div id="popup" class="popup">
+    <div class="popup-box">
+      <p>Hostel ka khana khake body nahi banti, Yashovardhan bhai 😉</p>
+      <button onclick="closePopup()">OK</button>
     </div>
   </div>
 
-  <nav class="nav">
-    <a href="./index.html">Home</a>
-    <a href="./steroid-shop.html">Steroid Shop</a>
-    <a href="./customers.html">Customers</a>
-    <a href="./user.html">User</a>
-    <a href="./contact.html">Contact</a>
-  </nav>
-</header>
+  <header class="top">
+    <div class="card header-card">
+      <div class="logo-box">F</div>
+      <div>
+        <h1>Fitness Planner</h1>
+        <p>Diet + Workout Auto Planner</p>
+      </div>
 
-<main class="grid">
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="steroid-shop.html">Steroid Shop</a>
+        <a href="customers.html">Customers</a>
+        <a href="user.html">User</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <section class="card form-card">
-    <h2>Tell me about you</h2>
+  <div class="wrap">
+    <div class="grid">
 
-    <label>Gender</label>
-    <select id="gender"><option value="male">Male</option><option value="female">Female</option></select>
+      <!-- LEFT CARD -->
+      <div class="card">
+        <h2>Tell me about you</h2>
 
-    <label>Age</label>
-    <input id="age" type="number" value="20">
+        <label>Gender</label>
+        <select id="gender">
+          <option>Male</option>
+          <option>Female</option>
+        </select>
 
-    <label>Height (cm)</label>
-    <input id="height" type="number" value="170">
+        <label>Age</label>
+        <input type="number" id="age" value="20">
 
-    <label>Weight (kg)</label>
-    <input id="weight" type="number" value="70">
+        <label>Height (cm)</label>
+        <input type="number" id="height" value="170">
 
-    <label>Body Type</label>
-    <select id="body"><option value="meso">Meso</option><option value="ecto">Ecto</option><option value="endo">Endo</option></select>
+        <label>Weight (kg)</label>
+        <input type="number" id="weight" value="70">
 
-    <label>Goal</label>
-    <select id="goal">
-      <option value="build">Build Muscle</option>
-      <option value="lean_bulk">Lean Bulk</option>
-      <option value="lose">Lose Fat</option>
-      <option value="maintain">Maintain</option>
-      <option value="endurance">Endurance</option>
-    </select>
+        <label>Body Type</label>
+        <select id="bodytype">
+          <option>Meso</option>
+          <option>Endo</option>
+          <option>Ecto</option>
+        </select>
 
-    <label>Do you go to gym?</label>
-    <select id="gym"><option value="yes">Yes</option><option value="sometimes">Sometimes</option><option value="no">No</option></select>
+        <label>Goal</label>
+        <select id="goal">
+          <option>Build Muscle</option>
+          <option>Lose Fat</option>
+          <option>Maintain</option>
+        </select>
 
-    <label>Desired Physique</label>
-    <select id="physique">
-      <option value="aesthetic">Aesthetic</option>
-      <option value="bulky">Bulky</option>
-      <option value="shredded">Shredded</option>
-      <option value="strength">Strength</option>
-    </select>
+        <label>Do you go to gym?</label>
+        <select id="gym">
+          <option>Yes</option>
+          <option>No</option>
+        </select>
 
-    <label>Protein Preference</label>
-    <select id="proteinPref">
-      <option value="auto">Auto</option>
-      <option value="1.6">1.6</option>
-      <option value="1.8">1.8</option>
-      <option value="2.0">2.0</option>
-      <option value="2.2">2.2</option>
-    </select>
+        <label>Desired Physique</label>
+        <select id="physique">
+          <option>Shredded</option>
+          <option>Bulky</option>
+          <option>Aesthetic</option>
+        </select>
 
-    <button class="btn" id="planBtn">Generate Plan</button>
-  </section>
+        <button id="generateBtn">Generate Plan</button>
+      </div>
 
-  <aside class="card output-card">
-    <h2>Your Plan</h2>
-    <div id="result" class="result-box">Click Generate Plan</div>
-  </aside>
+      <!-- RIGHT CARD -->
+      <div class="card">
+        <h2>Your Plan</h2>
+        <div id="result">Click Generate Plan</div>
+      </div>
 
-</main>
-</div>
+    </div>
+  </div>
 
-<script src="./script.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+
+    window.onload = () => {
+      document.getElementById("popup").style.display = "flex";
+    }
+  </script>
+
 </body>
 </html>
-
