@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Fitness Planner</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body class="page-home">
 
 <div class="wrap">
 
@@ -20,9 +20,11 @@
   </div>
 
   <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="steroid-shop.html">Steroid Shop</a>
-    <a href="contact.html">Contact</a>
+    <a href="./index.html">Home</a>
+    <a href="./steroid-shop.html">Steroid Shop</a>
+    <a href="./customers.html">Customers</a>
+    <a href="./user.html">User</a>
+    <a href="./contact.html">Contact</a>
   </nav>
 </header>
 
@@ -31,50 +33,49 @@
   <section class="card form-card">
     <h2>Tell me about you</h2>
 
-    <div class="form-row"><label>Gender</label>
-      <select id="gender"><option value="male">Male</option><option value="female">Female</option></select>
-    </div>
+    <label>Gender</label>
+    <select id="gender"><option value="male">Male</option><option value="female">Female</option></select>
 
-    <div class="form-row"><label>Age</label><input id="age" type="number" value="20"></div>
-    <div class="form-row"><label>Height (cm)</label><input id="height" type="number" value="170"></div>
-    <div class="form-row"><label>Weight (kg)</label><input id="weight" type="number" value="70"></div>
+    <label>Age</label>
+    <input id="age" type="number" value="20">
 
-    <div class="form-row"><label>Body Type</label>
-      <select id="body"><option value="meso">Meso</option><option value="ecto">Ecto</option><option value="endo">Endo</option></select>
-    </div>
+    <label>Height (cm)</label>
+    <input id="height" type="number" value="170">
 
-    <div class="form-row"><label>Goal</label>
-      <select id="goal">
-        <option value="build">Build Muscle</option>
-        <option value="lean_bulk">Lean Bulk</option>
-        <option value="lose">Lose Fat</option>
-        <option value="maintain">Maintain</option>
-        <option value="endurance">Endurance</option>
-      </select>
-    </div>
+    <label>Weight (kg)</label>
+    <input id="weight" type="number" value="70">
 
-    <div class="form-row"><label>Do you go to gym?</label>
-      <select id="gym"><option value="yes">Yes</option><option value="sometimes">Sometimes</option><option value="no">No</option></select>
-    </div>
+    <label>Body Type</label>
+    <select id="body"><option value="meso">Meso</option><option value="ecto">Ecto</option><option value="endo">Endo</option></select>
 
-    <div class="form-row"><label>Desired Physique</label>
-      <select id="physique">
-        <option value="aesthetic">Aesthetic</option>
-        <option value="bulky">Bulky</option>
-        <option value="shredded">Shredded</option>
-        <option value="strength">Strength</option>
-      </select>
-    </div>
+    <label>Goal</label>
+    <select id="goal">
+      <option value="build">Build Muscle</option>
+      <option value="lean_bulk">Lean Bulk</option>
+      <option value="lose">Lose Fat</option>
+      <option value="maintain">Maintain</option>
+      <option value="endurance">Endurance</option>
+    </select>
 
-    <div class="form-row"><label>Protein Preference</label>
-      <select id="proteinPref">
-        <option value="auto">Auto</option>
-        <option value="1.6">1.6 g/kg</option>
-        <option value="1.8">1.8 g/kg</option>
-        <option value="2.0">2.0 g/kg</option>
-        <option value="2.2">2.2 g/kg</option>
-      </select>
-    </div>
+    <label>Do you go to gym?</label>
+    <select id="gym"><option value="yes">Yes</option><option value="sometimes">Sometimes</option><option value="no">No</option></select>
+
+    <label>Desired Physique</label>
+    <select id="physique">
+      <option value="aesthetic">Aesthetic</option>
+      <option value="bulky">Bulky</option>
+      <option value="shredded">Shredded</option>
+      <option value="strength">Strength</option>
+    </select>
+
+    <label>Protein Preference</label>
+    <select id="proteinPref">
+      <option value="auto">Auto</option>
+      <option value="1.6">1.6</option>
+      <option value="1.8">1.8</option>
+      <option value="2.0">2.0</option>
+      <option value="2.2">2.2</option>
+    </select>
 
     <button class="btn" id="planBtn">Generate Plan</button>
   </section>
@@ -85,16 +86,8 @@
   </aside>
 
 </main>
-
 </div>
 
-<!-- POPUP SCRIPT -->
-<script>
-  window.addEventListener("load", function() {
-    alert("hostel ka khana khake body nhi banti yashovardhan bhai ;)");
-  });
-</script>
-
-<script src="script.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>
