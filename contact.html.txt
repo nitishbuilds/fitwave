@@ -1,0 +1,36 @@
+!DOCTYPE html
+html lang=en
+head
+  meta charset=UTF-8
+  meta name=viewport content=width=device-width, initial-scale=1.0
+  titleContact Ustitle
+  link rel=stylesheet href=style.css
+head
+body
+
+div class=wrap
+
+header class=top
+  div class=card header-card
+    div class=logo-boxFdiv
+    divh1Contact Ush1div
+  div
+
+  nav class=nav
+    a href=index.htmlHomea
+    a href=steroid-shop.htmlSteroid Shopa
+    a href=contact.htmlContacta
+  nav
+header
+
+div class=card
+  h2Get in Touchh2
+  pEmail nitishkushwaha721@gmail.com
+  pInstagram @nitissh_10
+  pPhone +91 7415203865
+div
+
+div
+
+body
+html

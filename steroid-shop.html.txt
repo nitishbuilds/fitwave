@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steroid Shop (FAKE DEMO ONLY)</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap: 20px; }
+    .product-card { background:#fff; border-radius:12px; padding:16px; border:1px solid #ddd; box-shadow:0 3px 10px rgba(0,0,0,0.1); }
+    .product-card img { width:100%; height:160px; border-radius:10px; object-fit:cover; }
+    .product-title { font-size:18px; font-weight:bold; margin-top:8px; }
+    .product-price { font-size:16px; font-weight:bold; margin:6px 0; }
+    .product-fake { color:red; font-size:13px; font-weight:bold; }
+    .buy-btn { width:100%; padding:10px; background:#06b6d4; border:none; border-radius:8px; color:white; cursor:pointer; margin-top:8px; }
+  </style>
+
+</head>
+<body>
+
+<div class="wrap">
+
+<header class="top">
+  <div class="card header-card">
+    <div class="logo-box">F</div>
+    <div>
+      <h1>Premium Steroid Store</h1>
+      <p class="small">⚠ Fake Demo — No real steroids</p>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="steroid-shop.html">Steroid Shop</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="card">
+  <h2>Popular “Steroids” (Fake Products)</h2>
+
+  <div class="product-grid">
+
+    <div class="product-card">
+      <img src="https://i.imgur.com/P8ZQXMO.jpeg">
+      <div class="product-title">Testosterone Enanthate 250</div>
+      <div class="product-price">₹2,999</div>
+      <div class="product-fake">FAKE PRODUCT</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://i.imgur.com/aB5r9rW.jpeg">
+      <div class="product-title">Trenbolone Acetate 100</div>
+      <div class="product-price">₹3,499</div>
+      <div class="product-fake">DEMO ONLY</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://i.imgur.com/WnPqw5Y.jpeg">
+      <div class="product-title">Dianabol (Dbol)</div>
+      <div class="product-price">₹1,799</div>
+      <div class="product-fake">NOT REAL</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://i.imgur.com/zoP3j0j.jpeg">
+      <div class="product-title">Deca-Durabolin 300</div>
+      <div class="product-price">₹3,199</div>
+      <div class="product-fake">PARODY</div>
+      <button class="buy-btn">Add to Cart</button>
+    </div>
+
+  </div>
+</div>
+
+<div class="card">
+  <h2>Note</h2>
+  <p>This page is a <strong>fake parody store</strong> made for testing on localhost.</p>
+</div>
+
+</div>
+
+</body>
+</html>
