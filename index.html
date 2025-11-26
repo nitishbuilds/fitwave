@@ -7,23 +7,9 @@
 
 <body>
 
-<!-- POPUP -->
-<div id="popup" class="popup">
-  <div class="popup-box">
-    Hostel ka khana khake body nahi banti — Yashovardhan bhai 😉
-    <br><br>
-    <button onclick="document.getElementById('popup').style.display='none'">OK</button>
-  </div>
-</div>
-
-<script>
-  window.onload = () => {
-    document.getElementById("popup").style.display = "flex";
-  };
-</script>
-
 <header class="header-card">
   <div class="logo-box">F</div>
+
   <div>
     <h1>Fitness Planner</h1>
     <p>Diet + Workout Auto Planner</p>
@@ -41,45 +27,64 @@
 <div class="wrap">
   <div class="grid">
 
+    <!-- LEFT CARD -->
     <div class="card">
-      <h2>Tell me about you</h2>
+      <h2>Your Details (Static Demo)</h2>
 
       <label>Gender</label>
-      <select id="gender"><option>Male</option><option>Female</option></select>
+      <select><option>Male</option><option>Female</option></select>
 
       <label>Age</label>
-      <input type="number" id="age" value="20">
+      <input type="number" value="20">
 
       <label>Height (cm)</label>
-      <input type="number" id="height" value="170">
+      <input type="number" value="170">
 
       <label>Weight (kg)</label>
-      <input type="number" id="weight" value="70">
+      <input type="number" value="70">
 
       <label>Body Type</label>
-      <select id="bodytype">
+      <select>
         <option>Meso</option><option>Endo</option><option>Ecto</option>
       </select>
 
       <label>Goal</label>
-      <select id="goal">
-          <option>Build Muscle</option>
-          <option>Lose Fat</option>
-          <option>Maintain</option>
+      <select>
+        <option>Build Muscle</option>
+        <option>Lose Fat</option>
+        <option>Maintain</option>
       </select>
 
-      <button id="generateBtn">Generate Plan</button>
+      <button disabled style="opacity:0.5; cursor:not-allowed;">
+        Generate Plan (Disabled — No JS)
+      </button>
     </div>
 
+    <!-- RIGHT CARD -->
     <div class="card">
       <h2>Your Plan</h2>
-      <div id="result">Click Generate Plan</div>
+
+      <div id="result">
+        <b>Your Summary</b><br>
+        BMI: 24.2<br>
+        Calories: 2310 kcal<br><br>
+
+        <b>Macros</b><br>
+        Protein: 140 g<br><br>
+
+        <b>Weekly Plan</b><br>
+        Day1: Push Workout<br>
+        Day2: Legs<br>
+        Day3: Rest / Cardio<br>
+        Day4: Pull Workout<br>
+        Day5: Full Body<br>
+        Day6: Light Activity<br>
+        Day7: Complete Rest
+      </div>
     </div>
 
   </div>
 </div>
-
-<script src="script.js"></script>
 
 </body>
 </html>
