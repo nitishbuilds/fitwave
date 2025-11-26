@@ -26,21 +26,27 @@
 <div class="wrap">
   <div class="card">
     <h2>Contact Info</h2>
+
     <p><strong>Email:</strong> nitishkushwaha721@gmail.com</p>
     <p><strong>Instagram:</strong> @nitissh_10</p>
     <p><strong>Phone:</strong> +91 7415203865</p>
+
     <hr style="margin:12px 0; border-color:rgba(255,255,255,0.08)">
 
     <h3>Send a quick message</h3>
-    <form onsubmit="alert('Message sent (demo).'); return false;">
+
+    <form>
       <label>Name</label>
       <input type="text" placeholder="Your name" required>
 
       <label>Message</label>
-      <textarea placeholder="Write your message" style="width:100%; height:100px; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.15); background:rgba(0,0,0,0.35); color:#fff"></textarea>
+      <textarea placeholder="Write your message" style="width:100%; height:100px"></textarea>
 
-      <button type="submit">Send</button>
+      <button type="submit" disabled style="opacity:0.5; cursor:not-allowed;">
+        Send (Disabled — No JS)
+      </button>
     </form>
+
   </div>
 </div>
 
